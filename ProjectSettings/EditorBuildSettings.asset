@@ -5,5 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/TopDownGunPack/Scenes/Demo Scene.unity
+    path: Assets/Scenes/Main Menu 1.unity
+    guid: 7d94223e1b5939c4dae2f3ac82082372
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Win Screen 1.unity
+    guid: cfada14d334ee0f49add94b2f6e249cc
+  - enabled: 1
+    path: Assets/Scenes/Lose Screen.unity
+    guid: 0c7d9c3022483fd4092bd314d2bb4fb7
+  - enabled: 1
+    path: Assets/Scenes/Instructions 1.unity
+    guid: b150b72d5465c1d40809a3cbf0576acc
+  - enabled: 1
+    path: Assets/Scenes/Credits 1.unity
+    guid: b3aaa3ce4ad5a0149a950132c20c0f5a
+  m_configObjects: {}
