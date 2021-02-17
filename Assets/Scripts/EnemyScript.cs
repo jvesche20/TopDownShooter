@@ -32,9 +32,13 @@ public class EnemyScript : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
+                if(hit.transform.tag == "player")
+                {
+                    pursuing = true;
+                    target = hit.transform.gameObject;
+                }
                 //Debug.Log("I see something");
-                pursuing = true;
-                target = hit.transform.gameObject;
+                
             }
         }
         else

@@ -17,6 +17,8 @@ public class EnemyShootScript : MonoBehaviour
     public float shootForce = 20f;
     public GameObject Muzzle;
 
+    public ParticleSystem particleShoot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +37,13 @@ public class EnemyShootScript : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                //Debug.Log("I see something");
-                pursuing = true;
-                target = hit.transform.gameObject;
+                if (hit.transform.tag == "player")
+                {
+                    pursuing = true;
+                    target = hit.transform.gameObject;
+                }
+                    //Debug.Log("I see something");
+                    
             }
         }
         else
@@ -50,6 +56,7 @@ public class EnemyShootScript : MonoBehaviour
                 elapsed = elapsed % 3f;
                 GameObject shot = GameObject.Instantiate(projectile, Muzzle.transform.position, Muzzle.transform.rotation);
                 shot.GetComponent<Rigidbody>().AddForce(transform.forward * shootForce);
+                particleShoot.Play();
                 Destroy(shot, 3);
                 //Debug.Log(Time.time);
             }
